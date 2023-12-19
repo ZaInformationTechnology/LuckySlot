@@ -64,14 +64,14 @@ class UploadController extends Controller
     private function checkProductUploadValidation(Request $request)
     {
         Validator::make($request->all(), [
-            'ProductUpload' => 'required',
+            'ProductUpload' => 'required|mimes:xlsx,csv,xls',
         ])->validate();
     }
 
     private function checkCustomerUploadValidation(Request $request)
     {
         Validator::make($request->all(), [
-            'CustomerUpload' => 'required',
+            'CustomerUpload' => 'required|mimes:xlsx,csv,xls',
         ])->validate();
     }
 
