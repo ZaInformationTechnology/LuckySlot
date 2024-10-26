@@ -6,7 +6,7 @@ $(document).ready(function () {
     var cus_id = [];
     var prod_id = [];
 
-    // ajax call for getting participants and gift from server 
+    // ajax call for getting participants and gift from server
     $.ajax({
         url: "getCustomer",
         method: "GET",
@@ -31,7 +31,7 @@ $(document).ready(function () {
             initializeSlotMachine();
         },
     });
-    // changing theme color 
+    // changing theme color
     function setBackground() {
         // Check if color values are stored in localStorage
         var storedThemeColor = localStorage.getItem("theme_color");
@@ -64,9 +64,10 @@ $(document).ready(function () {
                     border: "8px solid #440000",
                 })
                 $(":root").css({
-                    "--bg1":"rgba(226,160,160,1)",
+                    "--bg1": "rgba(226,160,160,1)",
+                    "--bg1-hover": "rgba(226,141,167,1)",
                     "--color":"#440000",
-                    "--table-bg":"rgba(255,255,255,1)",
+                    "--table-bg":"rgba(255,255,255,0.81)",
                 })
                 $("#theme_color option[value=red]").attr("selected", true);
             } else if (theme_color === "blue") {
@@ -87,7 +88,8 @@ $(document).ready(function () {
                     border: "8px solid #00053d",
                 })
                 $(":root").css({
-                    "--bg1":"rgba(126,179,219,1)",
+                    "--bg1": "rgba(126,179,219,1)",
+                    "--bg1-hover": "rgba(105,162,226,0.84)",
                     "--color":"#00053d",
                     "--table-bg":"rgba(255,255,255,1)",
                 })
@@ -110,7 +112,8 @@ $(document).ready(function () {
                     border: "8px solid #02410a",
                 })
                 $(":root").css({
-                    "--bg1":"rgba(153,255,161,1)",
+                    "--bg1": "rgba(153,255,161,1)",
+                    "--bg1-hover": "rgba(130,255,169,1)",
                     "--color":"#02410a",
                     "--table-bg":"rgba(242,245,245,1)",
                 })
@@ -134,6 +137,7 @@ $(document).ready(function () {
                 })
                 $(":root").css({
                     "--bg1":"rgba(255,191,172,1)",
+                    "--bg1-hover":"rgba(255,152,151,0.95)",
                     "--color":"#755503",
                     "--table-bg":"rgba(236,236,236,1)",
                 })
@@ -157,6 +161,7 @@ $(document).ready(function () {
                 })
                 $(":root").css({
                     "--bg1":"rgba(174,138,250,1)",
+                    "--bg1-hover":"rgba(162, 145, 225, 0.93)",
                     "--color":"#1c024f",
                     "--table-bg":"rgba(226,213,242,1)",
                 })
@@ -180,6 +185,7 @@ $(document).ready(function () {
                 })
                 $(":root").css({
                     "--bg1":"rgba(228,156,225,1)",
+                    "--bg1-hover":"rgba(198, 126, 217, 1)",
                     "--color":"#4a024f",
                     "--table-bg":"rgba(254,243,254,1)"
                 })
@@ -202,13 +208,14 @@ $(document).ready(function () {
                     border: "8px solid #00053d",
                 })
                 $(":root").css({
-                    "--bg1":"rgba(226,160,160,1)",
+                    "--bg1": "rgba(226,160,160,1)",
+                    "--bg1-hover": "rgba(216, 143, 158, 1)",
                     "--color":"#00053d",
                     "--table-bg":"rgba(255,255,255,1)",
                 })
                 $("#theme_color option[value=red]").attr("selected", true);
             }
-            
+
         }
         // theme toggler
         $(".chbg").click(function () {
