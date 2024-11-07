@@ -27,7 +27,8 @@ $(document).ready(function () {
                 product_arr.push(name);
                 prod_id.push(id);
             });
-
+            customer_arr.splice(1,0,'---')
+            product_arr.splice(1,0,'---')
             initializeSlotMachine();
         },
     });
@@ -224,6 +225,7 @@ $(document).ready(function () {
     }
     // slot machine
     function initializeSlotMachine() {
+
         var customer_length = customer_arr.length;
         var product_length = product_arr.length;
         var customer_height = customer_length * 350;
@@ -239,6 +241,7 @@ $(document).ready(function () {
         var customer_reels, product_reels;
 
         function initial() {
+
             customer_reels = $(".customer_reel").each(function (i, v) {
                 v.innerHTML =
                     "<div><p>" +
@@ -260,11 +263,20 @@ $(document).ready(function () {
                     product_arr.join("</p><p>") +
                     "</p></div>";
             });
+            customer_arr = customer_arr.filter((v) => v !== "---");
+            product_arr = product_arr.filter((v) => v !== "---");
+            customer_length = customer_arr.length;
+            product_length = product_arr.length;
+            customer_height = customer_length * 350;
+            product_height = product_length * 350;
+            customer_divider = customer_height / customer_length;
+            product_divider = product_height / product_length;
 
             $("#startSlot").click(action);
         }
 
         function action() {
+            initial();
             for (var i = 0; i < 2; ++i) {
                 speeds[i] = Math.random() + 2.5;
                 r_c[i] =
@@ -281,7 +293,6 @@ $(document).ready(function () {
             $(".TwoColorBtn").css({
                 opacity: 0,
             });
-
             customer_animate();
             setTimeout(() => {
                 product_animate();
@@ -349,7 +360,7 @@ $(document).ready(function () {
                 prod_id[(r_p[0] / product_divider + 1) % product_length | 0]
             );
             winner_effect();
-            setTimeout(saveWinner, 4000);
+            setTimeout(saveWinner, 3000);
         }
 
         function saveWinner() {

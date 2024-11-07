@@ -137,9 +137,11 @@ h1 {
 .product_reel p {
     font-weight: bold;
     height: 350px;
-    line-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 350px; */
     font-size: 90px;
-
 }
 
 .lever {

@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="group lever">
-            <button id="startSlot">Start</button>
+            <button id="startSlot">ဥုံဖွ</button>
         </div>
         @else
         <div class="">
