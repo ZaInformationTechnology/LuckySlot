@@ -28,7 +28,7 @@
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="{{asset('assets/lib/jquery-3.7.1.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
 <script

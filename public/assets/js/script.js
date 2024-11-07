@@ -349,7 +349,7 @@ $(document).ready(function () {
                 prod_id[(r_p[0] / product_divider + 1) % product_length | 0]
             );
             winner_effect();
-            setTimeout(saveWinner, 3000);
+            setTimeout(saveWinner, 4000);
         }
 
         function saveWinner() {
