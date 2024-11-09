@@ -28,13 +28,13 @@
 
             <thead>
                 <tr>
-                    <th colspan="3" class="">Participant List</th>
+                    <th colspan="2" class="">Participant List</th>
                     <th colspan="">Gift List</th>
                 </tr>
                 <tr>
                     <th>No</th>
                     <th class="">Name</th>
-                    <th class="border-r border-slate-600">Phone</th>
+                    {{-- <th class="border-r border-slate-600">Phone</th> --}}
                     <th>Gift</th>
                 </tr>
             </thead>
@@ -47,7 +47,7 @@
                 <tr>
                     <td>{{ $i++ }}</td>
                     <td>{{ $winner->customer_name }}</td>
-                    <td class="border-r border-slate-600">{{ $winner->customer_phone }}</td>
+                    {{-- <td class="border-r border-slate-600">{{ $winner->customer_phone }}</td> --}}
                     <td>{{ $winner->product_name }}</td>
                 </tr>
                 @endforeach

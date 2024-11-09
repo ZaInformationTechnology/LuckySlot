@@ -18,7 +18,7 @@ class ProductsImport implements ToModel, WithHeadingRow, WithValidation
     {
         return new Product([
             "name" => $row["name"],
-            "description" => $row["description"],
+            // "description" => $row["description"],
         ]);
     }
     public function rules(): array
@@ -28,10 +28,10 @@ class ProductsImport implements ToModel, WithHeadingRow, WithValidation
                 'required',
                 'string',
             ],
-            'description' => [
-                'required',
-                'string',
-            ],
+            // 'description' => [
+            //     'required',
+            //     'string',
+            // ],
         ];
     }
 }

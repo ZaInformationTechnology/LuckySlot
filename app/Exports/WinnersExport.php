@@ -20,10 +20,10 @@ class WinnersExport implements FromCollection, WithHeadings
         return [
             'No',
             'Customer Name',
-            'Customer Phone',
-            'Customer Address',
+            // 'Customer Phone',
+            // 'Customer Address',
             'Product Name',
-            'Product Detail',
+            // 'Product Detail',
             'Created_at',
             'Updated_at',
         ];

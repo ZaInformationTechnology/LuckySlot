@@ -85,17 +85,18 @@
                     <thead>
 
                         <tr>
-                            <th class="">Name</th>
-                            <th>Phone</th>
-                            <th class="">Address</th>
+                            <th class="">No</th>
+                            <th>Name</th>
+                            {{-- <th class="">Address</th> --}}
                         </tr>
                     </thead>
                     <tbody>
+                        @php $i = 1; @endphp
                         @foreach ($customers as $customer)
                         <tr>
-                            <td class="">{{ $customer->name }}</td>
-                            <td>{{ $customer->phone }}</td>
-                            <td class="">{{ $customer->address }}</td>
+                            <td class="">{{ $i++ }}</td>
+                            <td>{{ $customer->name }}</td>
+                            {{-- <td class="">{{ $customer->address }}</td> --}}
                         </tr>
                         @endforeach
 
@@ -160,15 +161,16 @@
 
                     <thead>
                         <tr>
-                            <th class="w-1/2">Name</th>
-                            <th class="w-1/2">Description</th>
+                            <th class="">No</th>
+                            <th class="">Name</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @php $i = 1; @endphp
                         @foreach ($products as $product)
                         <tr>
-                            <td class="">{{ $product->name }}</td>
-                            <td>{{ $product->description }}</td>
+                            <td class="">{{ $i++ }}</td>
+                            <td>{{ $product->name }}</td>
                         </tr>
                         @endforeach
 

@@ -18,8 +18,8 @@ class CustomersImport implements ToModel, WithHeadingRow, WithValidation
     {
         return new Customer([
             "name" => $row["name"],
-            "phone" => $row["phone"],
-            "address" => $row["address"],
+            // "phone" => $row["phone"],
+            // "address" => $row["address"],
         ]);
     }
     public function rules(): array
@@ -29,13 +29,13 @@ class CustomersImport implements ToModel, WithHeadingRow, WithValidation
                 'required',
                 'string',
             ],
-            'phone' => [
-                'required',
-            ],
-            'address' => [
-                'required',
-                'string',
-            ],
+            // 'phone' => [
+            //     'required',
+            // ],
+            // 'address' => [
+            //     'required',
+            //     'string',
+            // ],
         ];
     }
 }
