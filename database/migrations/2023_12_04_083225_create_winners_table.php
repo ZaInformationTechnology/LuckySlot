@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('winners', function (Blueprint $table) {
             $table->id();
             $table->string('customer_name');
-            $table->string('customer_phone');
-            $table->text('customer_address');
+            $table->string('customer_phone')->nullable();
+            $table->text('customer_address')->nullable();
             $table->string('product_name');
-            $table->text('product_details');
+            $table->text('product_details')->nullable();
             $table->timestamps();
         });
     }
