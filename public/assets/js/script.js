@@ -253,24 +253,26 @@ $(document).ready(function () {
                     "</p></div>";
             });
 
-            product_reels = $(".product_reel").each(function (i, v) {
-                v.innerHTML =
-                    "<div><p>" +
-                    product_arr.join("</p><p>") +
-                    "</p></div><div><p>" +
-                    product_arr.join("</p><p>") +
-                    "</p></div><div><p>" +
-                    product_arr.join("</p><p>") +
-                    "</p></div>";
-            });
-            customer_arr = customer_arr.filter((v) => v !== "---");
-            product_arr = product_arr.filter((v) => v !== "---");
-            customer_length = customer_arr.length;
-            product_length = product_arr.length;
-            customer_height = customer_length * 350;
-            product_height = product_length * 350;
-            customer_divider = customer_height / customer_length;
-            product_divider = product_height / product_length;
+            setTimeout(() => {
+                product_reels = $(".product_reel").each(function (i, v) {
+                    v.innerHTML =
+                        "<div><p>" +
+                        product_arr.join("</p><p>") +
+                        "</p></div><div><p>" +
+                        product_arr.join("</p><p>") +
+                        "</p></div><div><p>" +
+                        product_arr.join("</p><p>") +
+                        "</p></div>";
+                });
+                customer_arr = customer_arr.filter((v) => v !== "---");
+                product_arr = product_arr.filter((v) => v !== "---");
+                customer_length = customer_arr.length;
+                product_length = product_arr.length;
+                customer_height = customer_length * 350;
+                product_height = product_length * 350;
+                customer_divider = customer_height / customer_length;
+                product_divider = product_height / product_length;
+            }, 600);
 
             $("#startSlot").click(action);
         }
@@ -289,7 +291,8 @@ $(document).ready(function () {
                     product_length;
             }
 
-            $("#startSlot").toggleClass("hidden");
+            $("#startSlot").toggleClass("running-slot");
+            $("#startSlot").attr("disabled", true);
             $(".TwoColorBtn").css({
                 opacity: 0,
             });
@@ -360,7 +363,7 @@ $(document).ready(function () {
                 prod_id[(r_p[0] / product_divider + 1) % product_length | 0]
             );
             winner_effect();
-            setTimeout(saveWinner, 3000);
+            setTimeout(saveWinner, 5000);
         }
 
         function saveWinner() {

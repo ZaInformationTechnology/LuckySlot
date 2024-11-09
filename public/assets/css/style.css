@@ -23,7 +23,7 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     /* background: rgb(120, 0, 0);
     background: linear-gradient(0deg, rgba(79, 3, 3,1) 0%, rgba(149, 7, 7,1) 100%); */
     position: relative;
@@ -144,6 +144,13 @@ h1 {
     font-size: 90px;
 }
 
+@media (max-width:1280px) {
+    .customer_reel p,
+    .product_reel p {
+        font-size: 60px;
+    }
+}
+
 .lever {
     padding-right: 20px;
     display: block;
@@ -168,7 +175,9 @@ h1 {
 .lever button:active {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
-
+#startSlot.running-slot{
+    opacity: 0;
+}
 .msg {
     text-align: center;
     color: #bbb;
